@@ -1,0 +1,14 @@
+version: "3"
+services:
+  postgres:
+    container_name: mikro-orm-contructor-assign-issue
+    image: postgres:latest
+    ports:
+      - "5432:5432"
+    environment:
+      - TZ=GMT
+      - PGTZ=GMT
+    volumes:
+      - ./data/postgres:/data/mikro-orm-contructor-assign-issue
+    env_file:
+      - docker.env
